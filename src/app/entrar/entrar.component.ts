@@ -17,12 +17,12 @@ export class EntrarComponent implements OnInit {
     private auth: AuthService,
     private router: Router
   ) { }
-    
-  ngOnInit() {
+
+  ngOnInit() { 
     window.scroll(0,0)
   }
 
-  entrar() {
+  entrar(){
     this.auth.entrar(this.userLogin).subscribe((resp: UserLogin)=>{
       this.userLogin = resp
 
@@ -32,19 +32,14 @@ export class EntrarComponent implements OnInit {
       environment.id = this.userLogin.id
 
       console.log(environment.token)
-
       console.log(environment.nome)
-
       console.log(environment.foto)
-
       console.log(environment.id)
 
-      this.userLogin.foto
-
       this.router.navigate(['/inicio'])
-    }, erro  =>{
-      if(erro.status == 500){
-        alert("Usuário ou senha estão incorretos!")
+    }, erro=>{
+      if(erro.status == 401){
+        alert('Usuário ou senha estão incorretos')
       }
     })
   }
