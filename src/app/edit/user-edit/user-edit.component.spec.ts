@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TemaDeleteComponent } from './tema-delete.component';
+import { UserEditComponent } from './user-edit.component';
 
-describe('TemaDeleteComponent', () => {
-  let component: TemaDeleteComponent;
-  let fixture: ComponentFixture<TemaDeleteComponent>;
+describe('UserEditComponent', () => {
+  let component: UserEditComponent;
+  let fixture: ComponentFixture<UserEditComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TemaDeleteComponent ]
+      declarations: [ UserEditComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TemaDeleteComponent);
+    fixture = TestBed.createComponent(UserEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
